@@ -1,0 +1,228 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemSimple}[1]{
+  \item\small{
+    {#1}
+  }
+}
+
+\newcommand{\certificateItem}[3]{
+  \item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small{
+      \textbf{#1}{, #2 \vspace{-2pt}}
+    } & \textit{\small #3} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Emad Ehsanrad} & Email: \href{mailto:emad.ehsanrad@gmail.com}{emad.ehsanrad@gmail.com}\\
+  Senior Software Engineer & Mobile: \href{tel:+989392693405}{+98-939-269-3405} \\
+\end{tabular*}
+
+
+%-----------SUMMARY-----------------
+\section{Summary}
+  Software engineer with 6+ years of diverse software engineering experience with specialties in software architecture design, infrastructure operation, and backend development.
+  Passionate about contributing to open-source and tech communities by sharing knowledge and experience.
+
+  %-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Notion Wave}{Dubai, UAE}
+      {Software Engineer}{February 2022 - Present}
+
+      \resumeItemListStart
+
+        \resumeItemSimple{Led the design and development of \href{https://edspirit.com/}{edSPIRIT}, a scalable SaaS Open edX platform, resulting in a client base of more than 200, boosting overall growth.}
+        \resumeItemSimple{Architected and implemented a new billing and subscription system, enhancing the client's user experience and boosting the platform's reliability.}
+        \resumeItemSimple{Built a custom solution for scaling down Kubernetes clusters to zero pods, slashing operational costs by 30\%.}
+        \resumeItemSimple{Designed a structured onboarding program for new engineers, ensuring smooth transition \& clear goals.}
+        \resumeItemSimple{Collaborated with cross-functional teams to develop and test web applications using Python and Django.}
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Avid Arvand}{Tehran, Iran}
+      {Fullstack Python developer}{May 2019 - February 2022}
+      \resumeItemListStart
+
+        \resumeItemSimple{Implemented multi-tenancy support, enhancing scalability and reducing operational costs by 20\%.}
+        \resumeItemSimple{Integrated authentication and other services with SSO with Keycloak, enhancing security and system efficiency.}
+        \resumeItemSimple{Automated EPUBs with web scraper, saving our team months \& securing a partnership with \href{https://www.rice.edu/}{Rice University}.}
+        \resumeItemSimple{Configured and managed CI/CD pipelines, improving application delivery time.}
+        \resumeItemSimple{Empowered team with Python/Django workshops, boosting skill development.}
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+        {InstructHub}{Tehran, Iran}
+        {Backend Developer}{September 2017 - January 2019}
+        \resumeItemListStart
+
+          \resumeItemSimple{Architected and deployed scalable, high-availability systems on AWS utilizing EC2, S3, RDS, and VPC.}
+          \resumeItemSimple{Worked closely with stakeholders to gather and analyze requirements for developing software solutions tailored to specific business needs.}
+          \resumeItemSimple{Built backend logic for coding exercises and auto-grading systems, applying algorithms to evaluate code submissions in real-time.}
+          \resumeItemSimple{Achieved 94\% test coverage by increasing the use of automated testing.}
+          \resumeItemSimple{Set up error logging and monitoring using tools like Sentry and ELK Stack, ensuring rapid issue identification.}
+
+          \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Kermanshah University of Technology}{Kermanshah, Iran}
+      {Bachelor of Science in Telecommunication Engineering}{September 2012 -- September 2016}
+    % \resumeSubheading
+    %   {Javad Al`Aeme}{Kermanshah, Iran}
+    %   {Diploma in Mathematics and Physics}{September 2008 -- September 2012}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+% \section{Projects}
+%   \resumeSubHeadingListStart
+%     \resumeSubItem{QuantSoftware Toolkit}
+%       {Open source python library for financial data analysis and machine learning for finance.}
+%     \resumeSubItem{Github Visualization}
+%       {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+%     \resumeSubItem{Recommendation System}
+%       {Music and Movie recommender systems using collaborative filtering on public datasets.}
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+%   \resumeSubHeadingListEnd
+
+%-----------CERTIFICATES-----------------
+\section{Certificates}
+  \resumeSubHeadingListStart
+    \certificateItem
+      {Machine Learning with Python}
+      {Coursera}
+      {2024}
+
+    \certificateItem
+      {LPIC 1 \& 2}
+      {Go To Class}
+      {2022}
+
+    % \certificateItem
+    %   {CCNA}
+    %   {Institute of Applied Science Technology}
+    %   {2017}
+  \resumeSubHeadingListEnd
+
+%
+%--------SKILLS------------
+\section{Skills}
+
+  \textbf{Languages}{: Python, Typescript, Dart, SQL}
+  \hfill
+  \textbf{Tools}{: Kubernetes, Docker, GitLab CI}\vspace{2pt}
+  \hfill
+  \newline
+  \textbf{Databases}{: MySQL, PostgreSQL, MongoDB}
+  \hfill
+  \textbf{Frameworks}{: Django, Flask, NextJS, Flutter}
+  \hfill
+
+%-------------------------------------------
+\end{document}
