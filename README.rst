@@ -22,7 +22,7 @@ With this, you can change the ``.tex`` files and the PDF file will auto generate
 
 Or just run ::
 
-  pdflatex main.tex
+  pdflatex Emad_Ehsanrad_v0.1.tex
 
 License
 *******
