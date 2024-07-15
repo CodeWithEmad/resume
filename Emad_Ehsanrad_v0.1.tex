@@ -12,6 +12,8 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multirow}
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -43,6 +45,17 @@
 
 %-------------------------
 % Custom commands
+\newcommand{\resumeFullHeading}[6]{
+   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+       \textbf{\Large #1} &
+       \href{mailto:#3}{\raisebox{-0.05\height}\faEnvelope \ #3} \quad
+       \href{tel:#4}{\raisebox{-0.05\height}\faPhone \ #4} \\
+       \textit{#2} &
+       \href{#5}{\raisebox{-0.05\height}\faLinkedin\ /in/emadehsanrad} \quad
+       \href{#6}{\raisebox{-0.05\height}\faGithub\ /CodeWithEmad} \\
+   \end{tabular*}
+}
+
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
@@ -53,14 +66,6 @@
   \item\small{
     {#1}
   }
-}
-
-\newcommand{\certificateItem}[3]{
-  \item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \small{
-      \textbf{#1}{, #2 \vspace{-2pt}}
-    } & \textit{\small #3} \\
-  \end{tabular*}\vspace{-5pt}
 }
 
 % Just in case someone needs a heading that does not need to be in a list
@@ -79,6 +84,13 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeSubheadingSimple}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} #2  \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\resumeSubSubheading}[2]{
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
@@ -94,79 +106,80 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titleWithDescription}[2]{\textbf{#1}{: #2}}
 
+\newcommand{\resumeLanguages}[4]{
+  \section{Languages}
+    \noindent
+    \titleWithDescription{#1}{#2}
+    \hfill
+    \titleWithDescription{#3}{#4}
+}
+
+\newcommand{\certificateItem}[3]{
+  \item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small{
+      \textbf{#1}{, #2 \vspace{-2pt}}
+    } & \textit{\small #3} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Emad Ehsanrad} & \href{mailto:emad.ehsanrad@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ emad.ehsanrad@gmail.com} \href{tel:+989392693405}{\raisebox{-0.05\height}\faPhone \ +98(939)269-3405} \\
-  Senior Software Engineer &  \href{https://www.linkedin.com/in/emadehsanrad/}{\raisebox{-0.05\height}\faLinkedin\ /in/emadehsanrad } \href{https://github.com/codewithemad}{\raisebox{-0.05\height}\faGithub\ /CodeWithEmad}\\
-\end{tabular*}
-
+\resumeFullHeading
+  {Emad Ehsanrad}
+  {Senior Software Engineer}
+  {emad.ehsanrad@gmail.com}
+  {+98(939)269-3405}
+  {https://www.linkedin.com/in/emadehsanrad/}{https://github.com/codewithemad}
 
 %-----------SUMMARY-----------------
 \section{Summary}
   Software engineer with 6+ years of diverse software engineering experience with specialties in software architecture design, infrastructure operation, and backend development.
   Passionate about contributing to open-source and tech communities by sharing knowledge and experience.
   Very interested in seeing and experiencing new environments and technologies and getting things DONE.
-  %-----------EXPERIENCE-----------------
+
+%-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Notion Wave}{Dubai, UAE}
-      {Software Engineer}{February 2022 - Present}
+    \resumeSubheadingSimple
+      {Notion Wave}{Software Engineer}{Dubai, UAE}{February 2022 - Present}
 
       \resumeItemListStart
-
         \resumeItemSimple{Led the design and development of \href{https://edspirit.com/}{edSPIRIT}, a scalable SaaS Open edX platform, resulting in a client base of more than 200, boosting overall growth.}
         \resumeItemSimple{Architected and implemented a new billing and subscription system, enhancing the client's user experience and boosting the platform's reliability.}
         \resumeItemSimple{Built a custom solution for scaling down Kubernetes clusters to zero pods, slashing operational costs by 30\%.}
         \resumeItemSimple{Designed a structured onboarding program for new engineers, ensuring smooth transition \& clear goals.}
         \resumeItemSimple{Collaborated with cross-functional teams to develop and test web applications using Python and Django.}
-
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Avid Arvand}{Tehran, Iran}
-      {Fullstack Python developer}{May 2019 - February 2022}
+    \resumeSubheadingSimple
+      {Avid Arvand}{Fullstack Python developer}{Tehran, Iran}{May 2019 - February 2022}
       \resumeItemListStart
-
         \resumeItemSimple{Implemented multi-tenancy support, enhancing scalability and reducing operational costs by 20\%.}
         \resumeItemSimple{Integrated authentication and other services with SSO with Keycloak, enhancing security and system efficiency.}
         \resumeItemSimple{Automated EPUBs with web scraper, saving our team months \& securing a partnership with \href{https://www.rice.edu/}{Rice University}.}
         \resumeItemSimple{Configured and managed CI/CD pipelines, improving application delivery time.}
         \resumeItemSimple{Empowered team with Python/Django workshops, boosting skill development.}
-
       \resumeItemListEnd
 
-    \resumeSubheading
-        {InstructHub}{Tehran, Iran}
-        {Backend Developer}{September 2017 - January 2019}
+    \resumeSubheadingSimple
+        {InstructHub}{Backend Developer}{Tehran, Iran}{September 2017 - January 2019}
         \resumeItemListStart
-
           \resumeItemSimple{Architected and deployed scalable, high-availability systems on AWS utilizing EC2, S3, RDS, and VPC.}
           \resumeItemSimple{Worked closely with stakeholders to gather and analyze requirements for developing software solutions tailored to specific business needs.}
           \resumeItemSimple{Built backend logic for coding exercises and auto-grading systems, applying algorithms to evaluate code submissions in real-time.}
           \resumeItemSimple{Achieved 94\% test coverage by increasing the use of automated testing.}
           \resumeItemSimple{Set up error logging and monitoring using tools like Sentry and ELK Stack, ensuring rapid issue identification.}
-
-          \resumeItemListEnd
+        \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-
-% --------Multiple Positions Heading------------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -198,12 +211,12 @@
     \certificateItem
       {Machine Learning with Python}
       {Coursera}
-      {2024}
+      {September 2024}
 
     \certificateItem
       {LPIC 1 \& 2}
       {Go To Class}
-      {2022}
+      {August 2022}
 
     % \certificateItem
     %   {CCNA}
@@ -215,15 +228,21 @@
 %--------SKILLS------------
 \section{Skills}
 
-  \textbf{Languages}{: Python, Typescript, Dart, SQL}
+  \titleWithDescription{Languages}{Python, Typescript, Dart, SQL}
   \hfill
-  \textbf{Tools}{: Kubernetes, Docker, GitLab CI}\vspace{2pt}
-  \hfill
+  \titleWithDescription{Tools}{Kubernetes, Docker, GitLab CI}\vspace{2pt}
   \newline
-  \textbf{Databases}{: MySQL, PostgreSQL, MongoDB}
+  \titleWithDescription{Databases}{MySQL, PostgreSQL, MongoDB}
   \hfill
-  \textbf{Frameworks}{: Django, Flask, NextJS, Flutter}
-  \hfill
+  \titleWithDescription{Frameworks}{Django, Flask, NextJS, Flutter}
+
+%--------LANGUAGES------------
+\resumeLanguages
+  {German}
+  {Elementary proficiency (A1)}
+  {English}
+  {Full professional proficiency (C1)}
 
 %-------------------------------------------
+
 \end{document}
