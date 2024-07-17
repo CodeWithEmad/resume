@@ -56,6 +56,18 @@
    \end{tabular*}
 }
 
+\newcommand{\resumeFullHeadingWithImage}[7]{%
+    \begin{minipage}[t]{0.7\textwidth}
+        \huge\textbf{#1}\\[0.2em]
+        \Large\textit{#2}\\[1em]
+        \small{#3 #4 #5}
+    \end{minipage}%
+    \begin{minipage}[t]{0.3\textwidth}
+        \raggedleft
+        \raisebox{-1.8cm}[0pt][0pt]{\includegraphics[width=#7]{#6}}
+    \end{minipage}
+}
+
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
@@ -131,12 +143,22 @@
 \begin{document}
 
 %----------HEADING-----------------
+% Without Image
 \resumeFullHeading
   {Emad Ehsanrad}
   {Senior Software Engineer}
   {emad.ehsanrad@gmail.com}
   {+98(939)269-3405}
   {https://www.linkedin.com/in/emadehsanrad/}{https://github.com/codewithemad}
+
+% With Image
+% \resumeFullHeadingWithImage
+%   {Emad Ehsanrad}
+%   {Software Engineer}
+%   {\href{mailto:emad.ehsanrad@gmail.com}{\faEnvelope\ emad.ehsanrad@gmail.com}}
+%   {\href{https://www.linkedin.com/in/emadehsanrad/}{\faLinkedin\ /emadehsanrad}}
+%   {\href{https://github.com/CodeWithEmad}{\faGithub\ /CodeWithEmad}}
+%   {./profile.jpg}{3cm}
 
 %-----------SUMMARY-----------------
 \section{Summary}
