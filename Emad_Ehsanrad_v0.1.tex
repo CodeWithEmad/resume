@@ -96,11 +96,11 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubheadingSimple}[4]{
+\newcommand{\resumeSubheadingSimple}[5]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} \small#2 \small#3 & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+      \textbf{\href{#2}{#1}} \small#3 \small#4 & \textit{\small #5} \\
+    \end{tabular*}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -171,8 +171,8 @@
   \resumeSubHeadingListStart
 
     \resumeSubheadingSimple
-      {Notion Wave}{Software Engineer}{Dubai, UAE}{February 2022 - Present}
-
+      {edSPIRIT}{https://www.linkedin.com/company/edspirit-tech/}{Software Engineer}{Dubai, UAE}{February 2022 - Present}
+      \resumeSubSubheading{A cloud-based company experienced in delivering full Open edX solutions.}{}
       \resumeItemListStart
         \resumeItemSimple{Led the design and development of \href{https://edspirit.com/}{edSPIRIT}, a scalable SaaS Open edX platform, resulting in a client base of more than 200, boosting overall growth.}
         \resumeItemSimple{Architected and implemented a new billing and subscription system, enhancing the client's user experience and boosting the platform's reliability.}
@@ -182,7 +182,8 @@
       \resumeItemListEnd
 
     \resumeSubheadingSimple
-      {Avid Arvand}{Fullstack Python developer}{Tehran, Iran}{May 2019 - February 2022}
+      {Pubnito}{https://www.linkedin.com/company/pubnito/}{Fullstack Python developer}{Tehran, Iran}{May 2019 - February 2022}
+      \resumeSubSubheading{An international company, experienced in creating content-based platforms and services.}{}
       \resumeItemListStart
         \resumeItemSimple{Implemented multi-tenancy support, enhancing scalability and reducing operational costs by 20\%.}
         \resumeItemSimple{Integrated authentication and other services with SSO with Keycloak, enhancing security and system efficiency.}
@@ -192,7 +193,8 @@
       \resumeItemListEnd
 
     \resumeSubheadingSimple
-        {InstructHub}{Backend Developer}{Tehran, Iran}{September 2017 - January 2019}
+        {InstructHub}{}{Backend Developer}{Tehran, Iran}{September 2017 - January 2019}
+        \resumeSubSubheading{A startup specializing in delivering innovative e-learning solutions.}{}
         \resumeItemListStart
           \resumeItemSimple{Architected and deployed scalable, high-availability systems on AWS utilizing EC2, S3, RDS, and VPC.}
           \resumeItemSimple{Worked closely with stakeholders to gather and analyze requirements for developing software solutions tailored to specific business needs.}
