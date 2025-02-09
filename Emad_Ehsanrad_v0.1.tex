@@ -64,7 +64,7 @@
     \end{minipage}%
     \begin{minipage}[t]{0.3\textwidth}
         \raggedleft
-        \raisebox{-1.8cm}[0pt][0pt]{\includegraphics[width=#7]{#6}}
+        \raisebox{-2cm}[0pt][0pt]{\includegraphics[width=#7]{#6}}
     \end{minipage}
 }
 
@@ -120,12 +120,14 @@
 
 \newcommand{\titleWithDescription}[2]{\textbf{#1}{: #2}}
 
-\newcommand{\resumeLanguages}[4]{
+\newcommand{\resumeLanguages}[6]{
   \section{Languages}
     \noindent
     \titleWithDescription{#1}{#2}
     \hfill
     \titleWithDescription{#3}{#4}
+    \hfill
+    \titleWithDescription{#5}{#6}
 }
 
 \newcommand{\certificateItem}[3]{
@@ -144,41 +146,44 @@
 
 %----------HEADING-----------------
 % Without Image
-\resumeFullHeading
-  {Emad Ehsanrad}
-  {Senior Software Engineer}
-  {emad.ehsanrad@gmail.com}
-  {+98(939)269-3405}
-  {https://www.linkedin.com/in/emadehsanrad/}{https://github.com/codewithemad}
+% \resumeFullHeading
+%   {Emad Ehsanrad}
+%   {Senior Software Engineer}
+%   {emad.ehsanrad@gmail.com}
+%   {https://www.linkedin.com/in/emadehsanrad/}{https://github.com/codewithemad}
 
 % With Image
-% \resumeFullHeadingWithImage
-%   {Emad Ehsanrad}
-%   {Software Engineer}
-%   {\href{mailto:emad.ehsanrad@gmail.com}{\faEnvelope\ emad.ehsanrad@gmail.com}}
-%   {\href{https://www.linkedin.com/in/emadehsanrad/}{\faLinkedin\ /emadehsanrad}}
-%   {\href{https://github.com/CodeWithEmad}{\faGithub\ /CodeWithEmad}}
-%   {./profile.jpg}{3cm}
+\resumeFullHeadingWithImage
+  {Emad Ehsanrad}
+  {Software Engineer}
+  {\href{mailto:emad.ehsanrad@gmail.com}{\faEnvelope\ emad.ehsanrad@gmail.com }}
+  {\href{https://www.linkedin.com/in/emadehsanrad/}{ \faLinkedin\ /emadehsanrad }}
+  {\href{https://github.com/CodeWithEmad}{ \faGithub\ /CodeWithEmad}}
+  {images/circle-head-shot.png}{3.3cm}
 
 %-----------SUMMARY-----------------
 \section{Summary}
-  Software engineer with 6+ years of diverse software engineering experience with specialties in software architecture design, infrastructure operation, and backend development.
-  Passionate about contributing to open-source and tech communities by sharing knowledge and experience.
-  Very interested in seeing and experiencing new environments and technologies and getting things DONE.
+  Experienced software engineer with more than 6 years of expertise in
+  developing scalable applications used by over 100 thousand users. Proficient
+  in multiple programming languages and frameworks.
+  Consistently worked in international environments with cross-functional teams
+  to drive growth through innovative solutions. Committed to continuous learning
+  and adapting to emerging technologies. Good team player and open-source contributor.
 
-%-----------EXPERIENCE-----------------
+  %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheadingSimple
-      {edSPIRIT}{https://www.linkedin.com/company/edspirit-tech/}{Software Engineer}{Dubai, UAE}{February 2022 - Present}
-      \resumeSubSubheading{A cloud-based company experienced in delivering full Open edX solutions.}{}
+      {edSPIRIT}{https://www.linkedin.com/company/edspirit-tech/}{Software Engineer}{Dubai, UAE}{May 2021 - Present}
+      \resumeSubSubheading{A cloud-based company experienced in delivering Open edX solutions. Hosting, consulting, and customizations.}{}
       \resumeItemListStart
-        \resumeItemSimple{Led the design and development of \href{https://edspirit.com/}{edSPIRIT}, a scalable SaaS Open edX platform, resulting in a client base of more than 200, boosting overall growth.}
-        \resumeItemSimple{Architected and implemented a new billing and subscription system, enhancing the client's user experience and boosting the platform's reliability.}
-        \resumeItemSimple{Built a custom solution for scaling down Kubernetes clusters to zero pods, slashing operational costs by 30\%.}
-        \resumeItemSimple{Designed a structured onboarding program for new engineers, ensuring smooth transition \& clear goals.}
-        \resumeItemSimple{Collaborated with cross-functional teams to develop and test web applications using Python and Django.}
+        \resumeItemSimple{Led the design and development of a scalable SaaS platform, resulting in a client base of more than 200.}
+        \resumeItemSimple{Supervised infrastructure transition (EKS to in-house clusters) and major upgrades with 99.99\% uptime.}
+        \resumeItemSimple{Collaborated with the sales team in client meetings, providing technical expertise to support product demonstrations and address customer inquiries.}
+        \resumeItemSimple{Designed an onboarding program for new engineers, ensuring a smooth transition \& rapid integration to the team.}
+        \resumeItemSimple{Recognized as a core contributor in the Open edX community, an open-source learning platform used by millions.}
+        \resumeItemSimple{Developed a real-time KPI dashboard using OpenTelemetry, Grafana, and custom data pipelines, improving operational visibility by 40\%, and pushing the culture of making data-driven decisions.}
       \resumeItemListEnd
 
     \resumeSubheadingSimple
@@ -186,21 +191,21 @@
       \resumeSubSubheading{An international company, experienced in creating content-based platforms and services.}{}
       \resumeItemListStart
         \resumeItemSimple{Implemented multi-tenancy support, enhancing scalability and reducing operational costs by 20\%.}
+        \resumeItemSimple{Devised a web scraping tool that automated 100\% of the EPUB creation workflow, saving our content team 3+ months of work and securing a partnership with Rice University.}
         \resumeItemSimple{Integrated authentication and other services with SSO with Keycloak, enhancing security and system efficiency.}
-        \resumeItemSimple{Automated EPUBs with web scraper, saving our team months \& securing a partnership with \href{https://www.rice.edu/}{Rice University}.}
-        \resumeItemSimple{Configured and managed CI/CD pipelines, improving application delivery time.}
-        \resumeItemSimple{Empowered team with Python/Django workshops, boosting skill development.}
+        \resumeItemSimple{Migrated the monolithic application to a containerized environment using Docker and Kubernetes, improving deployment efficiency and system reliability.}
+        \resumeItemSimple{Empowered all teams with workshops, boosting skill development and applying new techniques in daily tasks.}
       \resumeItemListEnd
 
     \resumeSubheadingSimple
-        {InstructHub}{}{Backend Developer}{Tehran, Iran}{September 2017 - January 2019}
-        \resumeSubSubheading{A startup specializing in delivering innovative e-learning solutions.}{}
+        {InstructHub}{https://instructhub.ir/}{Backend Developer}{Tehran, Iran}{September 2017 - January 2019}
+        \resumeSubSubheading{Cutting-edge company specializing in delivering innovative e-learning solutions.}{}
         \resumeItemListStart
-          \resumeItemSimple{Architected and deployed scalable, high-availability systems on AWS utilizing EC2, S3, RDS, and VPC.}
-          \resumeItemSimple{Worked closely with stakeholders to gather and analyze requirements for developing software solutions tailored to specific business needs.}
-          \resumeItemSimple{Built backend logic for coding exercises and auto-grading systems, applying algorithms to evaluate code submissions in real-time.}
-          \resumeItemSimple{Achieved 94\% test coverage by increasing the use of automated testing.}
-          \resumeItemSimple{Set up error logging and monitoring using tools like Sentry and ELK Stack, ensuring rapid issue identification.}
+          \resumeItemSimple{Refactored a large legacy codebase from Python 2 to 3, resulting in system performance \& using modern libraries.}
+          \resumeItemSimple{Worked closely with stakeholders to gather and analyze requirements for developing software solutions.}
+          \resumeItemSimple{Optimized database queries and implemented caching strategies, reducing average API response time.}
+          \resumeItemSimple{Configured \& managed CI/CD pipelines, reducing the number of deployment errors \& enhancing deployment efficiency.}
+          \resumeItemSimple{Implemented centralized logging and monitoring using ELK stack, replacing legacy practices and reducing issue detection time.}
         \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -210,10 +215,10 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Kermanshah University of Technology}{Kermanshah, Iran}
-      {Bachelor of Science in Telecommunication Engineering}{September 2012 -- September 2016}
+      {Bachelor of Science in Telecommunication Engineering}{September 2012 -- May 2016}
     % \resumeSubheading
     %   {Javad Al`Aeme}{Kermanshah, Iran}
-    %   {Diploma in Mathematics and Physics}{September 2008 -- September 2012}
+    %   {Diploma in Mathematics and Physics}{September 2008 -- May 2012}
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
@@ -230,23 +235,23 @@
 %   \resumeSubHeadingListEnd
 
 %-----------CERTIFICATES-----------------
-\section{Certificates}
-  \resumeSubHeadingListStart
-    \certificateItem
-      {Machine Learning with Python}
-      {Coursera}
-      {September 2024}
+% \section{Certificates}
+%   \resumeSubHeadingListStart
+%     \certificateItem
+%       {Machine Learning with Python}
+%       {Coursera}
+%       {September 2024}
 
-    \certificateItem
-      {LPIC 1 \& 2}
-      {Go To Class}
-      {August 2022}
+%     \certificateItem
+%       {LPIC 1 \& 2}
+%       {Go To Class}
+%       {August 2022}
 
     % \certificateItem
     %   {CCNA}
     %   {Institute of Applied Science Technology}
     %   {2017}
-  \resumeSubHeadingListEnd
+  % \resumeSubHeadingListEnd
 
 %
 %--------SKILLS------------
@@ -254,23 +259,20 @@
 
   \titleWithDescription{Languages}{Python, JavaScript, TypeScript, Dart, SQL.}
   \hfill
-  \titleWithDescription{Databases}{MySQL, MongoDB, ClickHouse.}
+  \titleWithDescription{Tools}{Kubernetes, Docker, GitLab CI, Jenkins.}\vspace{3pt}
   \newline
-  \titleWithDescription{Tools}{Kubernetes, Docker, GitLab CI.}\vspace{2pt}
+  \titleWithDescription{Databases}{MySQL, PostgreSQL MongoDB, ClickHouse, Neo4J.}
   \hfill
-  \titleWithDescription{Frameworks}{Django, Flask, NextJS, Flutter}
+  \titleWithDescription{Frameworks}{Django, Flask, NextJS.}
 
 %--------LANGUAGES------------
 \resumeLanguages
-  {German}
-  {Elementary proficiency (A1)}
   {English}
   {Full professional proficiency (C1)}
-
-%--------HOBBIES------------
-\section{Hobbies}
-
-I appreciate the art of coffee brewing and gourmet cooking while enjoying dogs' companionship, and I love music.
+  {German}
+  {Elementary proficiency (A1)}
+  {Persian}
+  {Native}
 %-------------------------------------------
 
 \end{document}
