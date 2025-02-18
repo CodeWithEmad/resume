@@ -38,7 +38,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-5pt}\scshape\raggedright\large
+  \vspace{-10pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -100,22 +100,22 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \vspace{-1pt}
+    \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}
 }
 
 \newcommand{\resumeSubheadingSimple}[5]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \vspace{-1pt}
+    \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1}, \textbf{\href{#3}{#2}} \space \small#4 & \textit{\small #5} \\
     \end{tabular*}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-5pt}
 }
@@ -126,7 +126,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1pt, parsep=0pt]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, parsep=0pt]} % Adjust left margin here
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 
 \newcommand{\titleWithDescription}[2]{\textbf{#1}{: #2}}
@@ -142,11 +142,11 @@
 }
 
 \newcommand{\certificateItem}[3]{
-  \item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
     \small{
       \textbf{#1}{, #2 \vspace{-2pt}}
     } & \textit{\small #3} \\
-  \end{tabular*}\vspace{-5pt}
+  \end{tabular*}\vspace{-12px}
 }
 
 %-------------------------------------------
@@ -183,8 +183,7 @@ to drive growth through innovative solutions. Committed to continuous learning
 and adapting to emerging technologies. Good team player and active \textbf{open-source contributor}.
 
   %-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
+\section{Work Experience}
 
     \resumeSubheadingSimple
       {Senior Software Engineer}{troweb}{https://www.linkedin.com/company/troweb/}{Dubai, UAE}{August 2023 - Present}
@@ -230,18 +229,15 @@ and adapting to emerging technologies. Good team player and active \textbf{open-
       %       \resumeItemSimple{Implemented centralized \textbf{logging and monitoring} with \textbf{ELK stack}, reducing issue detection time \textbf{from days to hours}.}
       %     \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
-  \resumeSubHeadingListStart
     \resumeSubheading
       {Kermanshah University of Technology}{Kermanshah, Iran}
       {Bachelor of Science in Telecommunication Engineering}{September 2012 -- May 2016}\vspace{3px}
     % \resumeSubheading
     %   {Javad Al`Aeme}{Kermanshah, Iran}
     %   {Diploma in Mathematics and Physics}{September 2008 -- May 2012}
-  \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 % \section{Projects}
@@ -258,7 +254,6 @@ and adapting to emerging technologies. Good team player and active \textbf{open-
 
 %-----------CERTIFICATES-----------------
 \section{Certificates}
-  \resumeSubHeadingListStart
 
     \certificateItem
       {AWS Cloud Practitioner}
@@ -269,8 +264,6 @@ and adapting to emerging technologies. Good team player and active \textbf{open-
       {Neo4j Certified Professional}
       {Neo4j Graph Academy}
       {January 2025}
-
-  \resumeSubHeadingListEnd
 
 %
 %--------SKILLS------------
