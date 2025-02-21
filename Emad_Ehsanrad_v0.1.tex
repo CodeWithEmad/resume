@@ -103,21 +103,20 @@
   \vspace{-1pt}
     \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}
+      \textit{\small#3} & \small #4 \\
+    \end{tabular*}\vspace{-4px}
 }
 
 \newcommand{\resumeSubheadingSimple}[5]{
-  \vspace{-1pt}
     \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1}, \textbf{\href{#3}{#2}} \space \small#4 & \textit{\small #5} \\
+      \textbf{#1}, \textbf{\href{#3}{#2}} \space \small#4 & \small#5 \\
     \end{tabular*}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
+      \textit{\small#1} & \small #2 \\
+    \end{tabular*}\vspace{-1pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -127,7 +126,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, parsep=0pt]} % Adjust left margin here
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 \newcommand{\titleWithDescription}[2]{\textbf{#1}{: #2}}
 
@@ -144,8 +143,8 @@
 \newcommand{\certificateItem}[3]{
   \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
     \small{
-      \textbf{#1}{, #2 \vspace{-2pt}}
-    } & \textit{\small #3} \\
+      \textbf{#1}{, #2}
+    } & \small #3 \\
   \end{tabular*}\vspace{-12px}
 }
 
@@ -175,30 +174,29 @@
 %-----------SUMMARY-----------------
 \section{Summary}
 \small
-Experienced software engineer with \textbf{7+ years} of expertise in
-developing \textbf{scalable applications} used by over \textbf{100,000 users}. Proficient
-in multiple programming languages and frameworks.
+Senior Software Engineer with \textbf{7+ years} of experience, building \textbf{scalable}, \textbf{AI-driven}
+applications used by \textbf{100,000+ users}. Proficient in multiple programming languages and frameworks.
 Consistently worked in \textbf{international environments} with \textbf{cross-functional teams}
 to drive growth through innovative solutions. Committed to continuous learning
-and adapting to emerging technologies. Good team player and active \textbf{open-source contributor}.
+and adapting to emerging technologies. Active \textbf{open-source contributor}.
 
   %-----------EXPERIENCE-----------------
 \section{Work Experience}
 
     \resumeSubheadingSimple
-      {Senior Software Engineer}{troweb}{https://www.linkedin.com/company/troweb/}{Dubai, UAE}{August 2023 - Present}
-      \resumeSubSubheading{AI powered knowledge management system (KMS) for businesses.}{}
+      {Senior Software Engineer}{troweb}{https://www.linkedin.com/company/troweb/}{}{Dubai, UAE}
+      \resumeSubSubheading{AI powered knowledge management system (KMS) for businesses.}{August 2023 - Present}
       \resumeItemListStart
-        \resumeItemSimple{Built \textbf{RAG pipelines} and designing \textbf{agentic workflows} to enhance automation and \textbf{intelligent decision-making}.}
+        \resumeItemSimple{Built \textbf{RAG pipelines} and designed \textbf{agentic workflows} to enhance automation and \textbf{intelligent decision-making}.}
         \resumeItemSimple{Engineered scalable microservices using \textbf{FastAPI} and \textbf{gRPC}, ensuring \textbf{high-performance inter-service communication}.}
         \resumeItemSimple{Designed and implemented an \textbf{event-driven} architecture leveraging \textbf{Kafka} and \textbf{Kubernetes}, reducing latency by 30\%.}
-        \resumeItemSimple{Secured \href{https://sprinto.com/blog/soc-2-type-2/}{\textbf{SOC 2 Type 2}} certification through strategic collaboration with \href{https://www.linkedin.com/company/atom-assurances-services/}{Atom Assurances Services} and \href{https://www.linkedin.com/company/sprinto-com/}{Sprinto}.}
+        \resumeItemSimple{Secured \href{https://sprinto.com/blog/soc-2-type-2/}{\textbf{SOC 2 Type 2}} certification through strategic collaboration with \textbf{\href{https://www.linkedin.com/company/atom-assurances-services/}{Atom Assurances Services}} and \textbf{\href{https://www.linkedin.com/company/sprinto-com/}{Sprinto}}.}
         \resumeItemSimple{Crafted and executed an \textbf{onboarding program}  that facilitated a \textbf{seamless transition} and rapid integration for new engineers.}
       \resumeItemListEnd
 
       \resumeSubheadingSimple
-        {Senior Software Engineer}{edSPIRIT}{https://www.linkedin.com/company/edspirit-tech/}{Dubai, UAE}{May 2021 - August 2023}
-        \resumeSubSubheading{A cloud-based company experienced in delivering Open edX solutions. Hosting, consulting, and customizations.}{}
+        {Senior Software Engineer}{edSPIRIT}{https://www.linkedin.com/company/edspirit-tech/}{}{Dubai, UAE}
+        \resumeSubSubheading{Cloud-based Open edX solutions, providing hosting, consulting, and customizations.}{May 2021 - August 2023}
         \resumeItemListStart
           \resumeItemSimple{Led the design and development of a \textbf{scalable SaaS platform}, adopted by \textbf{200+} academic institutions and universities.}
           \resumeItemSimple{Supervised seemless migration of infrastructure from \textbf{AWS EKS} to in-house clusters, ensuring a \textbf{highly available and resilient} environment with \textbf{99.99\%} uptime.}
@@ -208,8 +206,8 @@ and adapting to emerging technologies. Good team player and active \textbf{open-
         \resumeItemListEnd
 
       \resumeSubheadingSimple
-        {Software Engineer}{Pubnito}{https://www.linkedin.com/company/pubnito/}{Toronto, Canada}{May 2019 - April 2021}
-        \resumeSubSubheading{An international company, experienced in creating content-based platforms and services.}{}
+        {Software Engineer}{Pubnito}{https://www.linkedin.com/company/pubnito/}{}{Toronto, Canada}
+        \resumeSubSubheading{Content-based platforms and services provider.}{May 2019 - April 2021}
         \resumeItemListStart
           \resumeItemSimple{Implemented \textbf{multi-tenancy} support, enhancing \textbf{scalability} and reducing operational costs by \textbf{30\%}.}
           \resumeItemSimple{Devised a web scraping tool that \textbf{automated 100\%} of the EPUB creation workflow, saving our content team \textbf{3+ months of work} and securing a partnership with the \href{https://www.rice.edu/}{Rice University}.}
@@ -232,9 +230,11 @@ and adapting to emerging technologies. Good team player and active \textbf{open-
 
 %-----------EDUCATION-----------------
 \section{Education}
+
     \resumeSubheading
       {Kermanshah University of Technology}{Kermanshah, Iran}
-      {Bachelor of Science in Telecommunication Engineering}{September 2012 -- May 2016}\vspace{3px}
+      {Bachelor of Science in Telecommunication Engineering}{September 2012 -- May 2016}
+
     % \resumeSubheading
     %   {Javad Al`Aeme}{Kermanshah, Iran}
     %   {Diploma in Mathematics and Physics}{September 2008 -- May 2012}
@@ -271,7 +271,7 @@ and adapting to emerging technologies. Good team player and active \textbf{open-
 
   \titleWithDescription{Languages}{Python, JavaScript, TypeScript, SQL, GraphQL}\vspace{3pt}
   \hfill
-  \titleWithDescription{Databases}{MySQL, JSPostgreSQL, MongoDB, ClickHouse, Neo4J}
+  \titleWithDescription{Databases}{MySQL, PostgreSQL, MongoDB, ClickHouse, Neo4J}
   \newline
   \titleWithDescription{Soft Skills}{Team work, Problem-solving, Adaptability, Communication}
   \hfill
