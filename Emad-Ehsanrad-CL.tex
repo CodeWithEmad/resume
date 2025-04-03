@@ -1,0 +1,97 @@
+\documentclass[a5paper,12pt]{article}
+\usepackage{url}
+\usepackage{parskip}
+\usepackage{charter}
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[bottom=0in,top=0.5in,scale=0.92]{geometry}
+
+\usepackage{tabularx}
+
+\usepackage{enumitem}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+\usepackage{fontawesome5}
+% \usepackage{pifont}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+\vspace{-1cm}
+Emad Ehsanrad\\
+Tehran, Iran\\
+\href{mailto:emad.ehsnarad@gmail.com}{emad.ehsnarad@gmail.com}\\
+% \href{https://www.linkedin.com/in/emadehsanrad/}{LinkedIn Profile}\\
+% \href{https://github.com/codewithemad}{GitHub Profile}\\
+\\
+\today\\
+
+Hiring Manager\\
+HelloFresh\\
+Berlin, Germany\\
+% Hiring Manager’s Name
+% Company Name
+% Company Address
+% Company City, County, Postcode
+\end{minipage}
+}
+\end{tabularx}
+
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+\vspace{-1cm}
+\section{\large{}}
+
+% Dear Hiring Manager,
+% 1st par
+% introduce yourself and enthusiastically tell the employer why you’re applying for the job
+% You’ll want to make this paragraph specific to each job listing you apply for
+% you may want to mention this referral in your opening paragraph.
+
+% 2nd par
+% dig into your most relevant experience and talk about the specific qualifications and skills
+
+% Thank you for your consideration. I would love to discuss how I can contribute as a DevOps Engineer.
+% 3rd par
+% thank the employer
+
+Dear Hiring Manager,
+
+I am a Senior Software Engineer with over 7 years of experience designing and delivering scalable, high-performance backend systems, and I am excited to apply for the Senior Backend Engineer role at HelloFresh. Based in Iran, I am seeking opportunities in Europe and would greatly value the Berlin relocation support offered by HelloFresh to join your team in this dynamic phase of expansion.
+
+At troweb, I engineered event-driven microservices using FastAPI, Kafka, and Kubernetes, reducing latency by 30\% and supporting a user base exceeding 100,000. Previously, at edSPIRIT, I led the development of a SaaS platform adopted by 200+ institutions, achieving 99.99\% uptime through robust architecture and DevOps practices. My expertise in Python, microservices, and tools like RabbitMQ and PostgreSQL aligns directly with your team’s focus on reliable, distributed systems for customer engagement. As an active Open edX contributor and mentor, I thrive in collaborative, cross-functional environments, sharing knowledge to drive team success.
+
+I am proficient in English, have begun learning German to integrate seamlessly into the Berlin tech community, and am eager to bring my problem-solving skills to HelloFresh. I’d be thrilled to discuss how my experience can contribute to your mission of seamless customer communication at scale.
+
+Thank you for considering my application. I look forward to the opportunity to speak with you.
+
+Sincerely,\\
+Emad Ehsanrad
+\vspace{-0.5cm}
+
+\end{document}

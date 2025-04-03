@@ -1,0 +1,361 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{fourier}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{multirow}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeFullHeading}[5]{
+   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+       \textbf{\Huge #1}\vspace{5px} &
+       \small{\href{mailto:#3}{\raisebox{-0.05\height}\faEnvelope \ #3}} \quad
+       \small{\href{#4}{\raisebox{-0.05\height}\faLinkedin\ /in/emadehsanrad}} \quad
+       \small{\href{#5}{\raisebox{-0.05\height}\faGithub\ /CodeWithEmad}} \\
+       \textit{\large #2} & \\
+   \end{tabular*}
+}
+
+\newcommand{\resumeFullHeadingWithPhone}[6]{
+   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+       \textbf{\Large #1} &
+       \href{mailto:#3}{\raisebox{-0.05\height}\faEnvelope \ #3} \quad
+       \href{tel:#4}{\raisebox{-0.05\height}\faPhone \ #4} \\
+       \textit{#2} &
+       \href{#5}{\raisebox{-0.05\height}\faLinkedin\ /in/emadehsanrad} \quad
+       \href{#6}{\raisebox{-0.05\height}\faGithub\ /CodeWithEmad} \\
+   \end{tabular*}
+}
+
+\newcommand{\resumeFullHeadingWithImage}[7]{%
+    \begin{minipage}[t]{0.7\textwidth}
+        \huge\textbf{#1}\\[0.2em]
+        \Large\textit{#2}\\[1em]
+        \small{#3 #4 #5}
+    \end{minipage}%
+    \begin{minipage}[t]{0.3\textwidth}
+        \raggedleft
+        \raisebox{-2cm}[0pt][0pt]{\includegraphics[width=#7]{#6}}
+    \end{minipage}
+}
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemSimple}[1]{
+  \item\small{
+    {#1}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}
+    \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \small #4 \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubheadingSimple}[5]{
+    \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1}, \textbf{\href{#3}{#2}} \space \small#4 & \small#5 \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \small #2 \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, parsep=0pt]} % Adjust left margin here
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\newcommand{\titleWithDescription}[2]{\textbf{#1}{: #2}}
+
+\newcommand{\languageItem}[2]{
+    \titleWithDescription{#1}{#2}
+}
+
+\newcommand{\certificateItem}[4]{
+  \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+    \href{#3}{\textbf{#1}{, #2}} & \small #4 \\
+  \end{tabular*}\vspace{-10px}
+}
+
+\newcommand{\skillItem}[2]{
+  \textbf{#1:} #2 \\ {\vspace{3px}}
+}
+
+\newcommand{\projectItem}[3]{
+  \href{#3}{\textbf{#1:}} #2 \\ {\vspace{3px}}
+}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+% Without Image
+% \resumeFullHeading
+%   {Emad Ehsanrad}
+%   {Senior Software Engineer}
+%   {emad.ehsanrad@gmail.com}
+%   {https://www.linkedin.com/in/emadehsanrad/}
+%   {https://github.com/codewithemad}
+
+% With Image
+\resumeFullHeadingWithImage
+  {Emad Ehsanrad}
+  {Senior Software Engineer}
+  {\href{mailto:emad.ehsanrad@gmail.com}{\faEnvelope\ emad.ehsanrad@gmail.com }}
+  {\href{https://www.linkedin.com/in/emadehsanrad/}{ \faLinkedin\ /emadehsanrad }}
+  {\href{https://github.com/CodeWithEmad}{ \faGithub\ /CodeWithEmad}}
+  {images/circle-head-shot.png}{3.3cm}
+%-------------------------------------------
+
+%-----------SUMMARY-----------------
+\section{Summary}
+\small
+Senior Software Engineer with over \textbf{7 years} of experience building \textbf{scalable},
+\textbf{user-focused} web applications in Agile environments.
+Skilled in \textbf{Python}, \textbf{JavaScript}, and frameworks like \textbf{Django} and \textbf{FastAPI},
+I've \textbf{delivered efficient}, \textbf{high-performance} solutions for \textbf{100,000+ users}.
+Consistently worked in \textbf{international environments} with \textbf{cross-functional teams}
+to drive growth through \textbf{innovative solutions}. Committed to \textbf{continuous learning}
+and adapting to emerging technologies. Active \textbf{open-source contributor}.
+%-------------------------------------------
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+
+  \resumeSubheadingSimple
+    {Senior Software Engineer}{troweb}{https://www.linkedin.com/company/troweb/}{}{Remote - Dubai, UAE}
+    \resumeSubSubheading{AI powered knowledge management system (KMS) for businesses.}{Aug 2023 - Present}
+    \resumeItemListStart
+      \resumeItemSimple{Developed \textbf{AI-driven} solutions (\textbf{RAG pipelines}, \textbf{agentic workflows}) to enhance automation and \textbf{intelligent decision-making}.}
+      \resumeItemSimple{Engineered scalable microservices using \textbf{FastAPI} and \textbf{gRPC}, ensuring \textbf{high-performance inter-service communication}.}
+      \resumeItemSimple{Designed and implemented an \textbf{event-driven} architecture leveraging \textbf{Kafka} and \textbf{Kubernetes}, reducing latency by 30\%.}
+      \resumeItemSimple{Contributed to achieving \href{https://sprinto.com/blog/soc-2-type-2/}{\textbf{SOC 2 Type II}} certification by collaborating with compliance teams on \textbf{quality} and \textbf{security} standards.}
+      \resumeItemSimple{Mentored new engineers through a \textbf{custom onboarding program}, accelerating team integration and fostering a culture of \textbf{knowledge-sharing}.}
+    \resumeItemListEnd
+
+  \resumeSubheadingSimple
+    {Software Engineer}{edSPIRIT}{https://www.linkedin.com/company/edspirit-tech/}{}{Remote - Dubai, UAE}
+    \resumeSubSubheading{Cloud-based Open edX solutions, providing hosting, consulting, and customizations.}{May 2021 - Aug 2023}
+    \resumeItemListStart
+      \resumeItemSimple{Led the design and development of a \textbf{scalable SaaS platform}, adopted by \textbf{200+} academic institutions and universities.}
+      \resumeItemSimple{Managed seamless migration of infrastructure from \textbf{AWS EKS} to in-house clusters, ensuring a \textbf{highly available and resilient} environment with \textbf{99.99\%} uptime.}
+      \resumeItemSimple{Recognized as a \textbf{core contributor} in the \textbf{Open edX community}, an open-source learning platform used by millions.}
+      \resumeItemSimple{Developed a real-time KPI dashboard using \textbf{OpenTelemetry}, \textbf{Grafana}, and custom data pipelines, \textbf{improving operational visibility by 40\%}, and pushing the culture of making \textbf{data-driven decisions}.}
+      \resumeItemSimple{Partnered with the sales team in client meetings, \textbf{translating complex technical concepts} into actionable solutions, leading to improved customer satisfaction and \textbf{faster deal closures}.}
+    \resumeItemListEnd
+
+  \resumeSubheadingSimple
+    {Software Engineer}{Pubnito}{https://www.linkedin.com/company/pubnito/}{}{Remote - Toronto, Canada}
+    \resumeSubSubheading{Content-based platforms and services provider.}{May 2019 - Apr 2021}
+    \resumeItemListStart
+      \resumeItemSimple{Established \textbf{multi-tenancy} support, enhancing \textbf{scalability} and reducing operational costs by \textbf{30\%}.}
+      \resumeItemSimple{Devised a web scraping tool that \textbf{automated 100\%} of the EPUB creation workflow, saving our content team \textbf{3+ months of work}, which Aided to \textbf{securing a partnership} with \href{https://www.rice.edu/}{Rice University}.}
+      \resumeItemSimple{Deployed \textbf{SSO authentication with Keycloak}, boosting security, system efficiency, and enhancing user experience.}
+      \resumeItemSimple{Migrated monolithic applications to a containerized environment using \textbf{Docker} and \textbf{Kubernetes}, improving deployment efficiency and system reliability.}
+      \resumeItemSimple{Empowered all teams with \textbf{workshops}, boosting \textbf{skill development} and applying new techniques in daily tasks.}
+    \resumeItemListEnd
+
+  \resumeSubheadingSimple
+    {Backend Developer}{InstructHub}{}{}{On site - Tehran, Iran}
+      \resumeSubSubheading{Cutting-edge company specializing in delivering innovative e-learning solutions.}{Sep 2017 - Jan 2019}
+      \resumeItemListStart
+        \resumeItemSimple{Refactored a large \textbf{legacy codebase} from Python 2 to 3, resulting in system performance and using modern libraries.}
+        \resumeItemSimple{Collaborated with stakeholders to redesign core business processes, \textbf{cutting turnaround times} by \textbf{45\%}.}
+        \resumeItemSimple{Optimized database queries and introduced \textbf{caching strategies}, reducing average API response time.}
+        \resumeItemSimple{Configured and managed \textbf{CI/CD} pipelines that reduced deployment times by \textbf{70\%} and minimized production errors.}
+        \resumeItemSimple{Set up centralized \textbf{logging and monitoring} with \textbf{ELK stack}, reducing issue detection time \textbf{from days to hours}.}
+      \resumeItemListEnd
+
+    % \resumeSubheadingSimple
+    %   {Backend Developer}{West Electronics}{}{}{On site - Tehran, Iran}
+    %     \resumeSubSubheading{Smart Home Applications.}{Jan 2016 - Sep 2017}
+    %     \resumeItemListStart
+    %       \resumeItemSimple{Implemented \textbf{backend infrastructure} using \textbf{Python} and \textbf{Django}, ensuring efficient \textbf{data processing} and \textbf{storage}.}
+    %       \resumeItemSimple{Managed seamless \textbf{integration of IoT devices} with backend systems, enabling reliable \textbf{communication}.}
+    %       \resumeItemSimple{Developed and maintained \textbf{RESTful APIs} to support seamless integration with mobile and web applications.}
+    %       \resumeItemSimple{Optimized \textbf{backend performance} by implementing \textbf{asynchronous processing} and \textbf{database indexing}, reducing response times by \textbf{25\%}.}
+    %     \resumeItemListEnd
+%-------------------------------------------
+
+%--------SKILLS------------
+\section{Skills}
+
+  % Tabular
+  \titleWithDescription{Languages}{Python, JavaScript, TypeScript, SQL, GraphQL}\vspace{3pt}
+  \hfill
+  \titleWithDescription{Databases}{MySQL, PostgreSQL, MongoDB, ClickHouse, Neo4J}
+  \newline
+  \titleWithDescription{Soft Skills}{Team work, Problem-solving, Adaptability, Communication}
+  \hfill
+  \titleWithDescription{Frameworks}{Django, Flask, FastAPI, Next.js}\vspace{3pt}
+  \newline
+  \titleWithDescription{Tools}{Kubernetes, Helm, ELK, Docker, GitHub Actions, GitLab CI, Jenkins, Prometheus, Grafana, OpenTelemetry, Kafka, RabbitMQ}\vspace{3pt}
+  \hfill
+  \titleWithDescription{Cloud Platforms}{Amazon Web Services (AWS)}
+
+  % Single Line
+  % \skillItem{Languages}{Python, JavaScript, TypeScript, SQL, GraphQL}
+  % \skillItem{Databases}{MySQL, PostgreSQL, MongoDB, ClickHouse, Neo4J}
+  % \skillItem{Frameworks}{Django, Flask, FastAPI, Next.js}
+  % \skillItem{Tools}{Kubernetes, Helm, ELK, Docker, GitHub Actions, GitLab CI, Jenkins, Prometheus, Grafana, OpenTelemetry, Kafka, RabbitMQ}
+  % \skillItem{Cloud Platforms}{Amazon Web Services (AWS)}
+  % \skillItem{Soft Skills}{Team work, Problem-solving, Adaptability, Communication}
+%-------------------------------------------
+
+%-----------EDUCATION-----------------
+\section{Education}
+    \resumeSubheading
+      {Kermanshah University of Technology}{Kermanshah, Iran}
+      {Bachelor of Science in Telecommunication Engineering}{Sep 2012 - May 2016}
+    \resumeSubheading
+      {Javad Al`Aeme}{Kermanshah, Iran}
+      {Diploma in Mathematics and Physics}{Sep 2008 - May 2012}
+%-------------------------------------------
+
+%-----------VOLUNTEER-----------------
+\section{Volunteer Experience}
+
+  \resumeSubheadingSimple
+  {Content Creator}{CodeTherapy}{https://www.youtube.com/@CodeTherapy}{}{Remote}
+    \resumeSubSubheading{YouTube channel teaching Python to Persian-speaking audiences.}{Sep 2019 - Present}
+    \resumeItemListStart
+      \resumeItemSimple{Created educational videos on \textbf{Python programming}, fostering a growing \textbf{community of learners}.}
+      \resumeItemSimple{Designed \textbf{step-by-step tutorials} and \textbf{project-based lessons} to simplify complex programming concepts for beginners.}
+    \resumeItemListEnd
+
+  \resumeSubheadingSimple
+  {Technical Mentor}{Local Coding Bootcamp}{}{}{On site}
+    \resumeSubSubheading{In-person coding bootcamp for aspiring developers.}{Jul 2020 - Present}
+    \resumeItemListStart
+      \resumeItemSimple{Mentored \textbf{100+} students in Python, JavaScript, and development, providing guidance and support in their learning journey.}
+      \resumeItemSimple{Developed \textbf{curriculum materials} and \textbf{resources} to help students grasp complex concepts and improve their coding skills.}
+    \resumeItemListEnd
+%------------------------------------
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \projectItem{Here to Help}{Free resources and services for crisis support: Essential resources in difficult times, with \textbf{1000+ daily active users}.}{https://github.com/iranian-github/here-to-help}
+  \projectItem{Painless Maintenance}{\textbf{Helm chart} for deploying \textbf{maintenance pages} in Kubernetes, preserving user experience during downtimes.}{https://github.com/CodeWithEmad/helm-charts/tree/master/charts/maintenance}
+  \projectItem{Natural SQL Explorer}{\textbf{AI-powered} tool converting \textbf{natural language} to \textbf{SQL queries} with schema discovery and \textbf{real-time results}.}{https://github.com/CodeWithEmad/natural-sql-explorer}
+  \projectItem{Open Source Contributions}{Actively contributed to projects like \textbf{Apache Superset}, \textbf{Django}, \textbf{Pydantic}, and \textbf{Open edX}.}{https://github.com/codewithemad}
+%-------------------------------------------
+
+%-----------CERTIFICATES-----------------
+\section{Certificates}
+  \certificateItem
+    {AWS Cloud Practitioner}
+    {Amazon Web Services}
+    {https://www.credly.com/badges/ed1e4a0f-daa1-448d-a060-acb8de1d2ee6}
+    {Feb 2025}
+
+    \certificateItem
+    {Neo4j Certified Professional}
+    {Neo4j Graph Academy}
+    {https://graphacademy.neo4j.com/c/d8f0842b-9363-4d27-a25c-68b9cde0aa64/}
+    {Jan 2025}
+
+    \certificateItem
+    {Cisco Certified Network Associate (CCNA)}
+    {Institute of Applied Science Technology}
+    {}
+    {Aug 2020}
+
+  % \certificateItem
+  %   {Other certificates}
+  %   {on LinkedIn}
+  %   {https://www.linkedin.com/in/emadehsanrad/details/certifications/}
+  %   {}
+%-------------------------------------------
+
+%--------LANGUAGES------------
+\section{Languages}
+  \languageItem
+    {English}
+    {Full professional proficiency}
+  \hfill
+  \languageItem
+    {German}
+    {Elementary proficiency}
+  \hfill
+  \languageItem
+    {Persian}
+    {Native}
+  {\vspace{3px}}
+%-------------------------------------------
+
+%--------HOBBIES------------
+\section{Hobbies \& Interests}
+  \resumeItemListStart
+    \resumeItemSimple{Reading books on \textbf{technology} and \textbf{self-improvement}.}
+    \resumeItemSimple{Playing \textbf{chess} and \textbf{strategy games}.}
+    \resumeItemSimple{Traveling and exploring new \textbf{cultures}.}
+    \resumeItemSimple{Volunteering in \textbf{community events}.}
+  \resumeItemListEnd
+%-------------------------------------------
+
+\end{document}
